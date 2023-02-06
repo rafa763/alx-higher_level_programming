@@ -31,15 +31,15 @@ class Square:
     """position getter"""
     @property
     def position(self):
-        if self.__position[0] < 0 or self.__position[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = position
+        self.__position = position
 
     """position setter"""
     @position.setter
     def position(self, value):
-        self.__position = value
+        if self.__position[0] < 0 or self.__position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
     
     """public method to calc. area"""
     def area(self):
