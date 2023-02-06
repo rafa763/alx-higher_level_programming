@@ -3,10 +3,11 @@
 
 
 class Square:
-    def __init__(self, size):
-        """ initialize the class
 
-        Args:
-            param1 (size): lenght of the square side
-        """
+    """ initialize the class
+
+    Args:
+        param1 (size): lenght of the square side
+    """
+    def __init__(self, size):
         self.__size = size
