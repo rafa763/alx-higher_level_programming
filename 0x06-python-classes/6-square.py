@@ -31,7 +31,7 @@ class Square:
     """position getter"""
     @property
     def position(self):
-        self.__position = position
+        return self.__position
 
     """position setter"""
     @position.setter
@@ -40,7 +40,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-    
+ 
     """public method to calc. area"""
     def area(self):
         return (self.__size ** 2)
