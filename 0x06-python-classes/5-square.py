@@ -30,7 +30,7 @@ class Square:
     """public method to calc. area"""
     def area(self):
         return (self.__size ** 2)
-    
+
     """print a square"""
     def my_print(self):
         if self.__size > 0:
