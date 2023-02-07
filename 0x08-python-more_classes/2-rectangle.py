@@ -11,8 +11,8 @@ class Rectangle:
         param2 (height): height of the rectangle
     """
     def __init__(self, width=0, height=0):
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     """width getter"""
     @property
@@ -33,7 +33,7 @@ class Rectangle:
     def height(self):
         return self.__height
 
-    """height getter"""
+    """height setter"""
     @height.setter
     def height(self, value):
         if type(value) != int:
