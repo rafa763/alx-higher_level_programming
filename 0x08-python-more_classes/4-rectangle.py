@@ -15,7 +15,7 @@ class Rectangle:
         self.width = width
 
     def __repr__(self):
-        return ("{}({}, {})".format(self.__class__.__name__,
+        return ("{}({}, {})".format(self.__class__.__name__,\
                                 self.__width, self.__height))
 
     """width getter"""
