@@ -27,7 +27,10 @@ def matrix_divided(matrix, div):
         sub = []
         length.append(len(li))
         for i in li:
-            sub.append(round(i / div, 2))
+            if (type(i) == int or type(i) == float):
+                sub.append(round(i / div, 2))
+            else:
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         ans.append(sub)
 
     if len(set(length)) == 1:
