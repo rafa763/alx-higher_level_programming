@@ -19,7 +19,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     if type(matrix) != list:
         raise TypeError("matrix must be a matrix \
-                        (list of lists) of integers/floats")
+(list of lists) of integers/floats")
     ans = []
     length = []
     for li in matrix:
@@ -30,7 +30,7 @@ def matrix_divided(matrix, div):
                 sub.append(round(i / div, 2))
             else:
                 raise TypeError("matrix must be a matrix \
-                                (list of lists) of integers/floats")
+(list of lists) of integers/floats")
         ans.append(sub)
 
     if len(set(length)) == 1:
