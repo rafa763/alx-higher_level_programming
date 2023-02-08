@@ -24,5 +24,5 @@ def text_indentation(text):
                 True
             else:
                 ans += i
-            space = 0
+                space = 0
     print(ans, end='')
