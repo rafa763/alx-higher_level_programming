@@ -20,7 +20,9 @@ def text_indentation(text):
             ans += i
             ans += '\n\n'
         else:
-            if space != 1:
+            if space == 1 and i == ' ':
+                pass
+            else:
                 ans += i
             space = 0
     print(ans)
