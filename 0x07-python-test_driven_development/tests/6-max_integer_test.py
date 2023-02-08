@@ -13,6 +13,12 @@ class TestMaxInteger(unittest.TestCase):
     def test_multipe_max(self):
         self.assertEqual(max_integer([4, 4, 3, 1, 1]), 4)
 
+    def test_max_end(self):
+        self.assertEqual(max_integer([4, 4, 3, 1, 1, 5]), 4)
+
+    def test_single(self):
+        self.assertEqual(max_integer([5]), 5)
+
     def test_floats(self):
         self.assertEqual(max_integer([4.1, 4.2, 3.99, 1.1, 1.5]), 4.2)
 
