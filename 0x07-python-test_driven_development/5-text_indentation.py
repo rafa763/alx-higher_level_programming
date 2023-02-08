@@ -21,7 +21,7 @@ def text_indentation(text):
             ans += '\n\n'
         else:
             if space == 1 and i == ' ':
-                pass
+                True
             else:
                 ans += i
             space = 0
