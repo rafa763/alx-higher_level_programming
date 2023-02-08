@@ -4,23 +4,23 @@
 >>> add_integer(1, 2)
 3
 
->>> add_integer(1, -2)
+>>> add_integer(1.0, -2.0)
 -1
 
->>> add_integer(-1, 2)
+>>> add_integer(-1.2, 2.4)
 1
 
->>> add_integer(1)
-TypeError: b must be an int
+>>> add_integer(1,)
+99
 
->>> add_integer(,1)
+>>> add_integer(None)
 Traceback (most recent call last):
-TypeError: a must be an int
+TypeError: a must be an integer
 
->>> add_integer("s")
+>>> add_integer(1, "s")
 Traceback (most recent call last):
-TypeError: a must be an int
+TypeError: b must be an integer
 
->>> add_integer(,"s")
+>>> add_integer(None,)
 Traceback (most recent call last):
-TypeError: a must be an int
+TypeError: a must be an integer
