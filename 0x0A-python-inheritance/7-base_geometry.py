@@ -2,14 +2,7 @@
 """base class"""
 
 
-class BaseGeometry(object):
-    """
-    initialize the class
-    """
-    def __init(self, name, value):
-        self.name = name
-        self.value = value
-
+class BaseGeometry:
     """
     validate the passed integer
     Args:
