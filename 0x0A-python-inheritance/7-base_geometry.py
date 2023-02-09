@@ -2,7 +2,7 @@
 """base class"""
 
 
-class BaseGeometry:
+class BaseGeometry(object):
     """
     initialize the class
     """
