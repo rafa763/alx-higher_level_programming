@@ -27,7 +27,8 @@
 
 >>> #test to check if returned new list
 >>> l = MyList([2,3,1])
->>> l is MyList([2, 3, 1])
+>>> l is l.print_sorted()
+[1, 2, 3]
 False
 
 >>> #test with list contining floats and ints
