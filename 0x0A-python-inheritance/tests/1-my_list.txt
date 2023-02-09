@@ -25,11 +25,18 @@
 >>> l.print_sorted()
 []
 
->>> #test to check if returned new list
->>> my_list = MyList([2,3,1])
->>> my_list is my_list.print_sorted()
+>>> #test to check if l returns new list
+>>> l = MyList([2,3,1])
+>>> l is l.print_sorted()
 [1, 2, 3]
 False
+>>> l == l.print_sorted()
+[1, 2, 3]
+False
+>>> l is MyList([2,3,1])
+False
+>>> l == MyList([2,3,1])
+True
 
 >>> #test with list contining floats and ints
 >>> l = MyList([1.2, 1.3, 1.2, 1.1, 1.21])
