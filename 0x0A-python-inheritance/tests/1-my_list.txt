@@ -26,8 +26,8 @@
 []
 
 >>> #test to check if returned new list
->>> l = MyList([2,3,1])
->>> l is l.print_sorted()
+>>> my_list = MyList([2,3,1])
+>>> my_list is my_list.print_sorted()
 [1, 2, 3]
 False
 
