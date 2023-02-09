@@ -11,19 +11,19 @@
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 0)
 Traceback (most recent call last):
-ValueError: <name> must be greater than 0
+ValueError: my_int must be greater than 0
 
 >>> #check with negative value
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", -12)
 Traceback (most recent call last):
-ValueError: <name> must be greater than 0
+ValueError: my_int must be greater than 0
 
 >>> #check with non int value
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", "test")
 Traceback (most recent call last):
-TypeError: <name> must be an integer
+TypeError: my_int must be an integer
 
 >>> #missing 1 param
 >>> bg = BaseGeometry()
