@@ -1,0 +1,34 @@
+"""
+
+>>> # import
+>>> MyList = __import__('1-my_list').MyList
+
+>>> # test with 3 differnet numbers
+>>> l = MyList()
+>>> l.append(5)
+>>> l.append(3)
+>>> l.append(6)
+>>> l.print_sorted()
+[3, 5, 6]
+
+>>> #test with list containing 2 similar numbers
+>>> l = MyList([9,2,3,5,5,7])
+>>> l.print_sorted()
+[2, 3, 5, 5, 7, 9]
+
+>>> #test with empty list
+>>> l = MyList([])
+
+
+>>> #test with list contining floats and ints
+>>> l = MyList([1.2, 1.3, 1.2, 1.1, 1.21])
+>>> l.print_sorted()
+[1.1, 1.2, 1.2, 1.21, 1.3]
+
+>>> #test with strings and ints
+>>> l = MyList([1, 3, 'r', 2, 5])
+>>> l.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+"""
