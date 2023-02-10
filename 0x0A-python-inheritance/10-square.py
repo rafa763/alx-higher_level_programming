@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """inherited class"""
-BaseGeometry = __import__('9-rectangle').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """
     create inherited class from rectangle
     which is the base class in this case
