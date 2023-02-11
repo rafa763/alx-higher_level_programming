@@ -3,7 +3,7 @@
 
 
 def write_file(filename="", text=""):
-    """write a string to a text file 
+    """write a string to a text file
     Args:
         filename: the name of the file to read form
     Return:
