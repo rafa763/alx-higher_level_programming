@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """JSON representation"""
 
 
+import json
 def to_json_string(my_obj):
     """return JSON representation of passed string
     Args:
