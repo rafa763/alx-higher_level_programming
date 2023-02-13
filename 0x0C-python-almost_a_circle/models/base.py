@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""base class"""
+"""create base class"""
 
 
 class Base:
-    __nb_objects = 0
     """
     Assign id value based on the passed argument
     Args:
         id: the id of the created instance
         nb_objects: no of the created instances
     """
+    
+    __nb_objects = 0
+
     def __init__(self, id=None):
 
         if id is not None:
