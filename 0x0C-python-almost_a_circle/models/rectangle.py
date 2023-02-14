@@ -121,9 +121,9 @@ class Rectangle(Base):
         self.__y = value
 
     """
-    calclate area method
+    calclate area public method
     Returns:
-        area of the rectangle
+        area of the rectangle (width * height)
     """
     def area(self):
         return self.__width * self.__height
