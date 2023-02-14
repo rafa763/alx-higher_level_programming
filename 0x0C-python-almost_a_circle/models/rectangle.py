@@ -22,6 +22,8 @@ class Rectangle(Base):
 
     """
     width getter method
+    Returns:
+        return value of width
     """
     @property
     def width(self):
@@ -45,17 +47,21 @@ class Rectangle(Base):
 
     """
     height getter method
+    Return:
+        value of height
+    """
+    @property
+    def height(self):
+        return self.__height
+
+    """
+    height setter method
     Args:
         height: value to assign for rectangle height
     Exceptions:
         TypeError: if height is not an integer
         ValueError: if height is less than or equal to zero
     """
-    @property
-    def height(self):
-        return self.__height
-
-    """height setter method"""
     @height.setter
     def height(self, height):
         if type(height) != int:
@@ -66,6 +72,8 @@ class Rectangle(Base):
 
     """
     x getter method
+    Return:
+        value of x
     """
     @property
     def x(self):
@@ -89,6 +97,8 @@ class Rectangle(Base):
 
     """
     y getter method
+    Return:
+        value of y
     """
     @property
     def y(self):
@@ -112,6 +122,8 @@ class Rectangle(Base):
 
     """
     calclate area method
+    Returns:
+        area of the rectangle
     """
     def area(self):
         return self.__width * self.__height
