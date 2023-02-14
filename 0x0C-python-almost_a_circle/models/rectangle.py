@@ -144,3 +144,21 @@ class Rectangle(Base):
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        i = 0
+        for arg in args:
+            if i == 0:
+                if args is None:
+                    self.__init__(self.width, self.height, self.x, self.y)
+                else:
+                    self.id = arg
+            elif i == 1:
+                self.__width = arg
+            elif i == 2:
+                self.__height = arg
+            elif i == 3:
+                self.__x = arg
+            elif i == 4:
+                self.__y = arg
+            i += 1
