@@ -146,6 +146,9 @@ class Rectangle(Base):
                 self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
+        """
+        update the arguments of the current rectangle
+        """
         i = 0
         for arg in args:
             if i == 0:
