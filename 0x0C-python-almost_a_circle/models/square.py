@@ -42,3 +42,37 @@ class Square(Rectangle):
         print Square instance with the character #
         """
         super().display()
+
+    def update(self, *args, **kwargs):
+        """
+        update the square parameters dynamically
+        """
+        i = 0
+        if args:
+            for arg in args:
+                if i == 0:
+                    if arg is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif i == 1:
+                    self.width = arg
+                    self.height = arg
+                elif i == 2:
+                    self.x = arg
+                elif i == 3:
+                    self.y = arg
+                i += 1
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    if value is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == 'size':
+                    self.size = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
