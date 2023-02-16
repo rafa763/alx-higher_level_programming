@@ -17,33 +17,12 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
-    def width(self, value):
+    def size(self, size):
         """
-        initialize the square width using the parent
-        class Rectangle
+        set the width and height of the square
         """
-        super().width(value)
-
-    def height(self, value):
-        """
-        initialize the square height using the parent
-        class Rectangle
-        """
-        super().height(value)
-
-    def x(self, value):
-        """
-        initialize the square shift x using the parent
-        class Rectangle
-        """
-        super().x(value)
-
-    def y(self, value):
-        """
-        initialize the square shift y using the parent
-        class Rectangle
-        """
-        super().y(value)
+        self.width = size
+        self.height = size
 
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(
