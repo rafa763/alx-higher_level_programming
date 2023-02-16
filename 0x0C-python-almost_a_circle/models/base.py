@@ -4,6 +4,7 @@
 
 import json
 
+
 class Base:
     """
     Assign id value based on the passed argument
