@@ -145,23 +145,40 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update the arguments of the current rectangle
+        if args are passed kwargs are skipped
         """
         i = 0
-        for arg in args:
-            if i == 0:
-                if args is None:
-                    self.__init__(self.width, self.height, self.x, self.y)
-                else:
-                    self.id = arg
-            elif i == 1:
-                self.__width = arg
-            elif i == 2:
-                self.__height = arg
-            elif i == 3:
-                self.__x = arg
-            elif i == 4:
-                self.__y = arg
-            i += 1
+        if args:
+            for arg in args:
+                if i == 0:
+                    if args is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif i == 1:
+                    self.__width = arg
+                elif i == 2:
+                    self.__height = arg
+                elif i == 3:
+                    self.__x = arg
+                elif i == 4:
+                    self.__y = arg
+                i += 1
+        else:
+            if kwargs is None:
+                self.__init__(self.width, self.height, self.x, self.y)
+            else:
+                for i in kwargs.items():
+                    if i[0] == 'x':
+                        self.__x = i[1]
+                    elif i[0] == 'y':
+                        self.__y = i[1]
+                    elif i[0] == 'width':
+                        self.__width = i[1]
+                    elif i[0] == 'height':
+                        self.__height = i[1]
+                    elif i[0] == 'id':
+                        self.id = i[1]
