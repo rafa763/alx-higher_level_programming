@@ -40,3 +40,7 @@ class Base:
                 for i in list_objs:
                     dict_list.append(i.to_dictionary())
                 f.write(Base.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        return json.loads(json_string)
