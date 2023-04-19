@@ -10,6 +10,6 @@ if __name__ == "__main__":
     import sys
 
     with urllib.request.urlopen(sys.argv[1]) as res:
-        r = res.info()
-        if dict(r)['X-Request-Id']:
-            print(dict(r)['X-Request-Id'])
+        r = dict(res.info())
+        if 'X-Request-Id' in r:
+            print(r['X-Request-Id'])
