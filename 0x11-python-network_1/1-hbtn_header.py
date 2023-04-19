@@ -11,4 +11,5 @@ if __name__ == "__main__":
 
     with urllib.request.urlopen(sys.argv[1]) as res:
         r = res.info()
-        print(dict(r)['X-Request-Id'])
+        if dict(r)['X-Request-Id']:
+            print(dict(r)['X-Request-Id'])
