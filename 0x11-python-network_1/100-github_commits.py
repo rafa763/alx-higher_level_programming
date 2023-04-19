@@ -13,11 +13,11 @@ if __name__ == '__main__':
     url = 'https://api.github.com/repos/{}/{}/commits'.format(name, owner)
     r = requests.get(url)
     r = r.json()
-    for i in range(10):
-        try:
+    try:
+        for i in range(10):
             print('{}: {}'.format(
                 r[i].get('sha'),
                 r[i].get('commit').get('author').get('name'))
                 )
-        except IndexError:
-            pass
+    except IndexError:
+        pass
