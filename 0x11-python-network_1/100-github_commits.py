@@ -10,11 +10,11 @@ if __name__ == '__main__':
     name = sys.argv[1]
     owner = sys.argv[2]
 
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(name, owner)
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, name)
     r = requests.get(url).json()
 
     for c in r[0:10]:
             print('{}: {}'.format(
-                c.get('sha'),
-                c.get('commit').get('author').get('name'))
+                c['sha'],
+                c['commit']['author']['date'])
                 )
